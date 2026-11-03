@@ -50,6 +50,7 @@ uni-app x 是下一代 uni-app，跨平台应用开发引擎。包含 UTS 语言
 | 主题 | 说明 | 参考 |
 |------|------|------|
 | uvue CSS | flex 布局、样式不继承、选择器与优先级 | [css-ucss](references/css-ucss.md) |
+| 样式值域与 reset | 值域限制、css reset 默认值、废弃写法、字体图标、横滑轨道 | [css-value-limits](references/css-value-limits.md) |
 
 ## 组件与 API
 
