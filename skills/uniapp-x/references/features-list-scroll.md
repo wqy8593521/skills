@@ -10,6 +10,9 @@ description: 长列表 scroll-view、list-view、吸顶、嵌套滚动、sticky-
 - **scroll-view**：灵活，无内置复用机制，适合普通滚动、自定义下拉刷新；可做**嵌套滚动**（见下）。
 - **list-view**：基于 recycle-view，**长列表推荐**，可复用节点保证性能；子节点为 **list-item**，支持 **sticky-header** / **sticky-section** 吸顶。
 - 微信小程序下 list-view 目前编译为 scroll-view。
+- **滚动方向用 `direction`，不用 `scroll-y` / `scroll-x`**（后两者 4.0 起废弃，写了会编译告警）。合法值 `vertical`（默认）/ `horizontal` / `all` / `none`；竖向滚动无需写属性。App 端不支持运行时切换方向，VDOM 模式也不能同时横竖滚（需套两层）。
+- 横滑时行容器必须按内容撑开，否则 `scrollWidth == clientWidth`、`scrollLeft` 恒为 0。App 端 `width: max-content` 与 `min-width: 100%` 均非法，用 `align-self: flex-start`，详见 [css-value-limits](css-value-limits.md)。
+- App 端 `scroll-view` 的 `overflow` 不支持 `visible`，子元素溢出会被裁切。
 
 ## 吸顶
 
